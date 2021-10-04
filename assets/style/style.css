@@ -1,4 +1,4 @@
-.boxes {
+.boxes, .days{
     width: 20px;
     height: 20px;
     background: rgb(255, 255, 255);
@@ -13,7 +13,7 @@
     align-items: center;
     flex-wrap: wrap;
     max-width: 180px;
-    max-height: 40px;
+    max-height: 80px;
   }
   
   body {
