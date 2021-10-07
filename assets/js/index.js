@@ -2,6 +2,9 @@
 let board = document.querySelector('.container');
 const boxes = document.querySelector('.boxes');
 const addDays = document.querySelectorAll('.days')
+const datePage = document.querySelector('.date')
+let date = new Date()
+let day = date.getDay()
 const obj = {
     January: 31,
     February: 28,
@@ -16,9 +19,10 @@ const obj = {
     November: 30,
     December: 31,
 
+   
 }
 const NUMBER = 35;
-const date = 31;
+const allDay = 31;
 const arrDays = ['S', 'F', 'T', 'W', 'T', 'M', 'S']
 window.onload = onLo;
 
@@ -29,6 +33,7 @@ window.onload = onLo;
 
 function onLo(){
     //const addDays = document.querySelectorAll('.days')
+    datePage.innerHTML = day
 //Создание Дней Недели
 for(let f = 0; f<=6;f++){
     let day = arrDays[f]
@@ -53,6 +58,11 @@ for(let z = 0;z<=30;z++)
     {
         a++
         box[z].innerHTML = a 
+        if(day==z){
+            box[z-1].classList.add('active')
+        }
     }
+
+    
 }
 
