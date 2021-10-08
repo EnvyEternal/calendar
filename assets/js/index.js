@@ -2,7 +2,11 @@
 let board = document.querySelector('.container');
 const boxes = document.querySelector('.boxes');
 const addDays = document.querySelectorAll('.days')
-const obj = {
+const datePage = document.querySelector('.date')
+const date = new Date()
+const fullDay = date.getDate()  + '.' + date.getMonth() + '.' + date.getFullYear();
+const day = date.getDate()
+/*const obj = {
     January: 31,
     February: 28,
     March: 31,
@@ -16,19 +20,26 @@ const obj = {
     November: 30,
     December: 31,
 
-}
+   
+}*/
+const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const NUMBER = 35;
-const date = 31;
+const allDay = 31;
 const arrDays = ['S', 'F', 'T', 'W', 'T', 'M', 'S']
 window.onload = onLo;
 
-//function date(){
-  //  let x = Object.keys(obj)
-
-//}
 
 function onLo(){
-    //const addDays = document.querySelectorAll('.days')
+    //datePage.innerHTML = day
+    const numMonth = date.getMonth()
+    let nameMonth = month[numMonth]
+    datePage.innerHTML = nameMonth
+   const numberDay = document.createElement('div')
+   numberDay.innerHTML = fullDay
+   datePage.append(numberDay)
+   
+
+    
 //Создание Дней Недели
 for(let f = 0; f<=6;f++){
     let day = arrDays[f]
@@ -38,7 +49,6 @@ for(let f = 0; f<=6;f++){
     board.prepend(days)
    
 }
-   // const boxes = document.querySelector('.boxes')
    //Клонирование ячеек дат
    
 for(let i = 0; i<=33;i++)
@@ -53,6 +63,10 @@ for(let z = 0;z<=30;z++)
     {
         a++
         box[z].innerHTML = a 
+        if(day==z){
+            box[z-1].classList.add('active')
+        }
     }
-}
 
+    
+}
