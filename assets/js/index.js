@@ -3,10 +3,16 @@ let board = document.querySelector('.container');
 const boxes = document.querySelector('.boxes');
 const addDays = document.querySelectorAll('.days')
 const datePage = document.querySelector('.date')
+<<<<<<< HEAD
 const date = new Date()
 const fullDay = date.getDate()  + '.' + date.getMonth() + '.' + date.getFullYear();
 const day = date.getDate()
 /*const obj = {
+=======
+let date = new Date()
+let day = date.getDay()
+const obj = {
+>>>>>>> fa93ebdfe71bfb6059c08e68ce9f7d51a14ff702
     January: 31,
     February: 28,
     March: 31,
@@ -21,8 +27,12 @@ const day = date.getDate()
     December: 31,
 
    
+<<<<<<< HEAD
 }*/
 const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+=======
+}
+>>>>>>> fa93ebdfe71bfb6059c08e68ce9f7d51a14ff702
 const NUMBER = 35;
 const allDay = 31;
 const arrDays = ['S', 'F', 'T', 'W', 'T', 'M', 'S']
@@ -30,6 +40,7 @@ window.onload = onLo;
 
 
 function onLo(){
+<<<<<<< HEAD
     //datePage.innerHTML = day
     const numMonth = date.getMonth()
     let nameMonth = month[numMonth]
@@ -40,6 +51,10 @@ function onLo(){
    
 
     
+=======
+    //const addDays = document.querySelectorAll('.days')
+    datePage.innerHTML = day
+>>>>>>> fa93ebdfe71bfb6059c08e68ce9f7d51a14ff702
 //Создание Дней Недели
 for(let f = 0; f<=6;f++){
     let day = arrDays[f]
@@ -67,6 +82,12 @@ for(let z = 0;z<=30;z++)
             box[z-1].classList.add('active')
         }
     }
+<<<<<<< HEAD
+=======
+
+    
+}
+>>>>>>> fa93ebdfe71bfb6059c08e68ce9f7d51a14ff702
 
 
 }
